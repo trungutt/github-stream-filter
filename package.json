@@ -6,7 +6,9 @@
 		"start": "webpack-dev-server",
 		"check:lib": "npm-check",
 		"lint": "esw webpack.config.* src --color",
-		"lint:watch": "npm run lint -- --watch"
+		"lint:watch": "npm run lint -- --watch",
+		"test": "mocha --reporter progress --compilers js:babel-core/register src/**/*.spec.js",
+		"test:watch": "npm run test -- --watch --watch-extensions jsx"
 	},
 	"author": "trungutt",
 	"license": "MIT",
@@ -26,6 +28,8 @@
 		"webpack-dev-server": "^2.3.0"
 	},
 	"dependencies": {
+		"chai": "^3.5.0",
+		"mocha": "^3.2.0",
 		"redux": "^3.6.0",
 		"redux-logger": "^2.8.1"
 	}
