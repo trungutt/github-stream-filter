@@ -8,12 +8,13 @@ const reducer = (state, action) => {
 	}
 
 	return state;
-}
+};
+
 const store = createStore(reducer, 0, applyMiddleware(createLogger({ collapsed: true })));
 
 store.subscribe(() => {
 	const state = store.getState();
-	console.log('state = ', JSON.stringify(state, null, 5));
+	console.warning('state = ', JSON.stringify(state, null, 5));
 });
 
 store.dispatch({ type: 'INC', payload: 1 });

@@ -4,14 +4,23 @@
 	"description": "",
 	"scripts": {
 		"start": "webpack-dev-server",
-		"check:lib": "npm-check"
+		"check:lib": "npm-check",
+		"lint": "esw webpack.config.* src --color",
+		"lint:watch": "npm run lint -- --watch"
 	},
 	"author": "trungutt",
 	"license": "MIT",
 	"devDependencies": {
 		"babel-cli": "^6.22.2",
+		"babel-eslint": "^7.1.1",
 		"babel-loader": "^6.2.10",
 		"babel-preset-latest": "^6.22.0",
+		"eslint": "^3.15.0",
+		"eslint-config-airbnb": "^14.1.0",
+		"eslint-plugin-import": "^2.2.0",
+		"eslint-plugin-jsx-a11y": "^4.0.0",
+		"eslint-plugin-react": "^6.9.0",
+		"eslint-watch": "^2.1.14",
 		"npm-check": "^5.4.0",
 		"webpack": "^2.2.1",
 		"webpack-dev-server": "^2.3.0"
