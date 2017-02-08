@@ -1,9 +1,13 @@
 {
-  "name": "github-stream-filter",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-  },
-  "author": "trungutt",
-  "license": "MIT"
+	"name": "github-stream-filter",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"check:lib": "npm-check"
+	},
+	"author": "trungutt",
+	"license": "MIT",
+	"devDependencies": {
+		"npm-check": "^5.4.0"
+	}
 }
