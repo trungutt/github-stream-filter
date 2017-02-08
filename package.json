@@ -7,6 +7,8 @@
 		"check:lib": "npm-check",
 		"lint": "esw webpack.config.* src --color",
 		"lint:watch": "npm run lint -- --watch",
+		"pretest:typecheck": "flow",
+		"pretest": "npm run lint && npm run pretest:typecheck",
 		"test": "mocha --reporter progress --compilers js:babel-core/register src/**/*.spec.js",
 		"test:watch": "npm run test -- --watch --watch-extensions jsx"
 	},
@@ -23,6 +25,7 @@
 		"eslint-plugin-jsx-a11y": "^4.0.0",
 		"eslint-plugin-react": "^6.9.0",
 		"eslint-watch": "^2.1.14",
+		"flow-bin": "^0.38.0",
 		"npm-check": "^5.4.0",
 		"webpack": "^2.2.1",
 		"webpack-dev-server": "^2.3.0"

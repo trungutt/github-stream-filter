@@ -1,3 +1,5 @@
+/* @flow */
+
 import { createStore, applyMiddleware } from 'redux';
 import createLogger from 'redux-logger';
 
@@ -11,11 +13,6 @@ const reducer = (state, action) => {
 };
 
 const store = createStore(reducer, 0, applyMiddleware(createLogger({ collapsed: true })));
-
-store.subscribe(() => {
-	const state = store.getState();
-	console.warning('state = ', JSON.stringify(state, null, 5));
-});
 
 store.dispatch({ type: 'INC', payload: 1 });
 store.dispatch({ type: 'INC', payload: 1 });
