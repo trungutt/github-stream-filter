@@ -3,9 +3,9 @@
 	"version": "1.0.0",
 	"description": "",
 	"scripts": {
-		"start": "webpack-dev-server",
+		"start": "babel-node scripts/devServer.js",
 		"check:lib": "npm-check",
-		"lint": "esw webpack.config.* src --color",
+		"lint": "esw webpack.config.* scripts/devServer.js src --color",
 		"lint:watch": "npm run lint -- --watch",
 		"pretest:typecheck": "flow",
 		"pretest": "npm run lint && npm run pretest:typecheck",
@@ -19,6 +19,7 @@
 		"babel-eslint": "^7.1.1",
 		"babel-loader": "^6.2.10",
 		"babel-preset-latest": "^6.22.0",
+		"babel-preset-react": "^6.22.0",
 		"eslint": "^3.15.0",
 		"eslint-config-airbnb": "^14.1.0",
 		"eslint-plugin-import": "^2.2.0",
@@ -27,13 +28,20 @@
 		"eslint-watch": "^2.1.14",
 		"flow-bin": "^0.38.0",
 		"npm-check": "^5.4.0",
-		"webpack": "^2.2.1",
+		"react-hot-loader": "^1.3.1",
 		"webpack-dev-server": "^2.3.0"
 	},
 	"dependencies": {
 		"chai": "^3.5.0",
+		"express": "^4.14.1",
 		"mocha": "^3.2.0",
+		"open": "^0.0.5",
+		"react": "^15.4.2",
+		"react-dom": "^15.4.2",
 		"redux": "^3.6.0",
-		"redux-logger": "^2.8.1"
+		"redux-logger": "^2.8.1",
+		"webpack": "^2.2.1",
+		"webpack-dev-middleware": "^1.10.0",
+		"webpack-hot-middleware": "^2.16.1"
 	}
 }

@@ -1,6 +1,6 @@
 /* @flow */
 
-import { createStore, applyMiddleware } from 'redux';
+/* import { createStore, applyMiddleware } from 'redux';
 import createLogger from 'redux-logger';
 
 
@@ -16,5 +16,18 @@ const store = createStore(reducer, 0, applyMiddleware(createLogger({ collapsed: 
 
 store.dispatch({ type: 'INC', payload: 1 });
 store.dispatch({ type: 'INC', payload: 1 });
-store.dispatch({ type: 'INC', payload: 1 });
-store.dispatch({ type: 'INC', payload: 1 });
+store.dispatch({ type: 'INC', payload: 2 });
+store.dispatch({ type: 'INC', payload: 5 }); */
+
+import React from 'react';
+import { render } from 'react-dom';
+
+import stream from './mock';
+import App from './components/App';
+
+
+render(
+	<App stream={stream} />,
+	document.getElementById('app'),
+);
+
